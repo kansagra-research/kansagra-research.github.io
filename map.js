@@ -1,6 +1,6 @@
 // COLORS ---------------------------------------
 
-var colorPalette = ["#731b65","#9d2a69","#c73974","#e5677a","#ec9181","#f1b2a2","#ebc1a3","#ebd3a8","#f1e7be"]
+var colorPalette = ["#731b65","#9d2a69","#c73974","#e5677a","#ec9181","#f1b2a2","#ebc1a3","#ebd3a8","#f1e7be","#ccc"]
 
 function getColor(d) {
     return d > 200 ? colorPalette[0] :
@@ -11,7 +11,8 @@ function getColor(d) {
            d > 40 ? colorPalette[5] :
            d > 20 ? colorPalette[6] :
            d > 10 ? colorPalette[7] :
-                    colorPalette[8];
+           d > 0 ? colorPalette[8] :
+                    colorPalette[9] ;
 }
 
 
