@@ -1,1 +1,109 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Demographic Disparities in Proximity to Stroke Centers in the United States</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+  	<link rel="stylesheet" href="index.css">
+  	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+  	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+</head>
+<body>
+  <div>
+	<div class="navbar">
+	<div class="title">Demographic Disparities in Proximity to Stroke Centers in the United States</div>
+	</div>
+
+	<div class="panel">
+		<div class="options">
+			Use this map to locate stroke-certified hospitals in the contiguous United States, as well as driving distance to care. 
+			This is a non-profit project led by researchers at <a class="link" href="https://medicine.wustl.edu" target="blank">Washington University School of Medicine</a>.
+		</div>
+		<!-- <div class="options">
+			<div class="ui-widget"  style="text-align:left;">
+				<input id="autocomplete" placeholder="Find a State">
+			</div> 
+		</div> -->
+		<div class="options">
+			<div class="sectionhead">State</div>
+			<div class="subtitle" id="resultsState"></div>
+			<div id="resultsStatePop"></div>
+			<div id="resultsStateDist"></div>
+		</div>
+		<div class="options">
+			<div class="sectionhead">County</div>
+			<div class="subtitle" id="resultsCounties"></div>
+			<div id="resultsCountiesPop"></div>
+			<div id="resultsCountiesDist"></div>
+		</div>
+		<!-- <div class="options">
+			<div class="sectionhead">Tract</div>
+			<div class="subtitle" id="resultsTracts"></div>
+			<div id="resultsTractsPop"></div>
+			<div id="resultsTractsNearest"></div>
+			<div id="resultsTractsDistance"></div>
+		</div> -->
+		
+	</div>
+
+	<div class="main">
+		<div class="mapid" id="mapid"></div>
+	</div>
+
+	<div class="legend">
+		<img src="./img/legend.png" height="300px">
+	</div>
+
+	<!-- <div class="container">
+		
+		<div class="options">
+			Locate stroke-certified hospitals and compare them against their service area demographics.
+		</div>
+
+			<div class="descStates">
+				<div id="resultsState">Select a State</div>
+					<div id="resultsStatePop"></div>
+					<div id="resultsStatePctWhite"></div>
+					<div id="resultsStatePctNW"></div>
+					<div id="resultsStatePctOld"></div>
+			</div>
+			<div class="descCounties">
+				<div id="resultsCounties">Select a County</div>
+					<div id="resultsCountiesPop"></div>
+					<div id="resultsCountiesPctWhite"></div>
+					<div id="resultsCountiesPctNW"></div>
+					<div id="resultsCountiesPctOld"></div>
+			</div>
+			<div class="descZipCodes">
+				<div id="resultsZipCodes">Select a ZIP Code</div>
+					<div id="resultsZipCodesPop"></div>
+					<div id="resultsZipCodesPctWhite"></div>
+					<div id="resultsZipCodesPctNW"></div>
+					<div id="resultsZipCodesPctOld"></div>
+			</div>
+
+	</div> -->
+
+    		
+
+		</div>
+		<!-- <script type="text/javascript" src="us-states.js"></script> -->
+	<script type="text/javascript" src="data/states.js"></script>
+	<script type="text/javascript" src="data/counties.js"></script>
+	<script type="text/javascript" src="data/tracts.js"></script>
+	<script type="text/javascript" src="data/hosp-loc.js"></script>
+	<script type="text/javascript" src="hospitals.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+
+  </div>
+</body>
+</html>
